@@ -1,0 +1,35 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Contract
+    network: mainnet
+    source:
+      address: "0x8d12A197cB00D4747a1fe03395095ce2A5CC6819"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.2
+      language: wasm/assemblyscript
+      entities:
+        - Order
+        - Cancel
+        - Trade
+        - Deposit
+        - Withdraw
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Order(address,uint256,address,uint256,uint256,uint256,address)
+          handler: handleOrder
+        - event: Cancel(address,uint256,address,uint256,uint256,uint256,address,uint8,bytes32,bytes32)
+          handler: handleCancel
+        - event: Trade(address,uint256,address,uint256,address,address)
+          handler: handleTrade
+        - event: Deposit(address,address,uint256,uint256)
+          handler: handleDeposit
+        - event: Withdraw(address,address,uint256,uint256)
+          handler: handleWithdraw
+      file: ./src/mapping.ts

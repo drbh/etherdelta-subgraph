@@ -1,0 +1,46 @@
+type Order @entity {
+  id: ID!
+  tokenGet: Bytes! # address
+  amountGet: BigInt! # uint256
+  tokenGive: Bytes! # address
+  amountGive: BigInt! # uint256
+  expires: BigInt! # uint256
+  nonce: BigInt! # uint256
+  user: Bytes! # address
+}
+type Cancel @entity {
+  id: ID!
+  tokenGet: Bytes! # address
+  amountGet: BigInt! # uint256
+  tokenGive: Bytes! # address
+  amountGive: BigInt! # uint256
+  expires: BigInt! # uint256
+  nonce: BigInt! # uint256
+  user: Bytes! # address
+  v: Int! # uint8
+  r: Bytes! # bytes32
+  s: Bytes! # bytes32
+}
+type Trade @entity {
+  id: ID!
+  tokenGet: Bytes! # address
+  amountGet: BigInt! # uint256
+  tokenGive: Bytes! # address
+  amountGive: BigInt! # uint256
+  get: Bytes! # address
+  give: Bytes! # address
+}
+type Deposit @entity {
+  id: ID!
+  token: Bytes! # address
+  user: Bytes! # address
+  amount: BigInt! # uint256
+  balance: BigInt! # uint256
+}
+type Withdraw @entity {
+  id: ID!
+  token: Bytes! # address
+  user: Bytes! # address
+  amount: BigInt! # uint256
+  balance: BigInt! # uint256
+}
