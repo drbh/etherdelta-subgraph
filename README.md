@@ -35,7 +35,7 @@ http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/
 
 ### GraphQL Schema
 
-###Order
+### Order
 ```graphql
   id: ID!
   tokenGet: Bytes! # address
@@ -47,7 +47,7 @@ http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/
   user: Bytes! # address
 ```
 
-###Cancel
+### Cancel
 ```graphql
   id: ID!
   tokenGet: Bytes! # address
@@ -62,7 +62,7 @@ http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/
   s: Bytes! # bytes32
 ```
 
-###Trade
+### Trade
 ```graphql
   id: ID!
   tokenGet: Bytes! # address
@@ -73,7 +73,7 @@ http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/
   give: Bytes! # address
 ```
 
-###Deposit
+### Deposit
 ```graphql
   id: ID!
   token: Bytes! # address
@@ -82,7 +82,7 @@ http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/
   balance: BigInt! # uint256
 ```
 
-###Withdraw
+### Withdraw
 ```graphql
   id: ID!
   token: Bytes! # address
