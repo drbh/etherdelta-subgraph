@@ -6,12 +6,15 @@
 https://thegraph.com/explorer/subgraph/drbh/etherdelta  
 
 ### React + Apollo Web App
+
+![screenshot](https://raw.githubusercontent.com/drbh/etherdelta-subgraph/master/images/screenshot.png)
+
 http://etherdelta-the-graph.s3-website-us-east-1.amazonaws.com/  
 
 #### Example Query
 [https://api.thegraph.com/subgraphs/name/drbh/etherdelta
 ](https://api.thegraph.com/subgraphs/name/drbh/etherdelta)
-```
+```graphql
 {
   orders(first: 5) {
     id
