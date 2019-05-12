@@ -1,0 +1,49 @@
+body {
+    background-color: #282c34;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+    color: gold;
+    font-size: .6em;
+}
+
+.ReactTable {
+    /*width: 80% !important;*/
+    padding-bottom: 200px;
+    /*font-size: 12pt;*/
+    font-size: .6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+}
+
+.id-link {
+    color: white;
+    text-decoration: none;
+}
+
+.widefat {
+    background-color: transparent;
+    color: gold;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+.maincontents {
+    width: 80%;
+}
+
+@media only screen and (max-width: 900px) {
+.maincontents {
+    width: 98%;
+}
+}
