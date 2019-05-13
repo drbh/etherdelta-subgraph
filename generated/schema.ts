@@ -40,6 +40,15 @@ export class Order extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
+  }
+
   get tokenGet(): Bytes {
     let value = this.get("tokenGet");
     return value.toBytes();
@@ -132,6 +141,15 @@ export class Cancel extends Entity {
 
   set id(value: string) {
     this.set("id", Value.fromString(value));
+  }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 
   get tokenGet(): Bytes {
@@ -255,6 +273,15 @@ export class Trade extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
+  }
+
   get tokenGet(): Bytes {
     let value = this.get("tokenGet");
     return value.toBytes();
@@ -291,12 +318,12 @@ export class Trade extends Entity {
     this.set("amountGive", Value.fromBigInt(value));
   }
 
-  get get2(): Bytes {
+  get _get(): Bytes {
     let value = this.get("get");
     return value.toBytes();
   }
 
-  set get2(value: Bytes) {
+  set _get(value: Bytes) {
     this.set("get", Value.fromBytes(value));
   }
 
@@ -338,6 +365,15 @@ export class Deposit extends Entity {
 
   set id(value: string) {
     this.set("id", Value.fromString(value));
+  }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 
   get token(): Bytes {
@@ -405,6 +441,15 @@ export class Withdraw extends Entity {
 
   set id(value: string) {
     this.set("id", Value.fromString(value));
+  }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 
   get token(): Bytes {

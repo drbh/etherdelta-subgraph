@@ -11,6 +11,7 @@ export function handleOrder(event: OrderEvent): void {
   let entity = new Order(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
+  entity.timestamp = event.block.timestamp
   entity.tokenGet = event.params.tokenGet
   entity.amountGet = event.params.amountGet
   entity.tokenGive = event.params.tokenGive
@@ -25,6 +26,7 @@ export function handleCancel(event: CancelEvent): void {
   let entity = new Cancel(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
+  entity.timestamp = event.block.timestamp
   entity.tokenGet = event.params.tokenGet
   entity.amountGet = event.params.amountGet
   entity.tokenGive = event.params.tokenGive
@@ -42,11 +44,12 @@ export function handleTrade(event: TradeEvent): void {
   let entity = new Trade(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
+  entity.timestamp = event.block.timestamp
   entity.tokenGet = event.params.tokenGet
   entity.amountGet = event.params.amountGet
   entity.tokenGive = event.params.tokenGive
   entity.amountGive = event.params.amountGive
-  entity.get2 = event.params.get
+  entity._get = event.params.get
   entity.give = event.params.give
   entity.save()
 }
@@ -55,6 +58,7 @@ export function handleDeposit(event: DepositEvent): void {
   let entity = new Deposit(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
+  entity.timestamp = event.block.timestamp
   entity.token = event.params.token
   entity.user = event.params.user
   entity.amount = event.params.amount
@@ -66,6 +70,7 @@ export function handleWithdraw(event: WithdrawEvent): void {
   let entity = new Withdraw(
     event.transaction.hash.toHex() + "-" + event.logIndex.toString()
   )
+  entity.timestamp = event.block.timestamp
   entity.token = event.params.token
   entity.user = event.params.user
   entity.amount = event.params.amount
